@@ -1,0 +1,64 @@
+{
+  "common_errors": {
+    "build_failed": {
+      "error": "Build failed",
+      "causes": [
+        "TypeScript compilation errors",
+        "Missing dependencies",
+        "Environment variables not set",
+        "Import/export errors",
+        "Syntax errors"
+      ],
+      "solutions": [
+        "Run 'npm run build' locally to see detailed errors",
+        "Fix TypeScript errors shown in output",
+        "Check all imports are correct",
+        "Verify all dependencies are in package.json",
+        "Set required environment variables"
+      ]
+    },
+    "function_timeout": {
+      "error": "Function execution timed out",
+      "causes": [
+        "Infinite loops in API routes",
+        "Long-running operations",
+        "Database connection issues",
+        "External API timeouts"
+      ],
+      "solutions": [
+        "Add timeout handling to API routes",
+        "Optimize database queries",
+        "Use async/await properly",
+        "Add error boundaries"
+      ]
+    },
+    "module_not_found": {
+      "error": "Module not found",
+      "causes": [
+        "Missing dependency in package.json",
+        "Incorrect import paths",
+        "Case sensitivity issues",
+        "Dev dependencies in production"
+      ],
+      "solutions": [
+        "Add missing packages to dependencies",
+        "Check import paths are correct",
+        "Ensure proper case in file names",
+        "Move dev dependencies to dependencies if needed"
+      ]
+    },
+    "environment_variables": {
+      "error": "Environment variable undefined",
+      "causes": [
+        "Variables not set in Vercel dashboard",
+        "Missing NEXT_PUBLIC_ prefix",
+        "Variables not available at build time"
+      ],
+      "solutions": [
+        "Set variables in Vercel dashboard",
+        "Add NEXT_PUBLIC_ prefix for client-side variables",
+        "Redeploy after setting variables"
+      ]
+    }
+  }
+}
